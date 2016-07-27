@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <title>各责任主体 - MAIPAE - 建筑工程多主体交互平台</title>
+        <meta name="keywords" content="MAIPAE,maipae,建筑工程多主体交互平台">
+        <meta name="description" content="建筑工程多主体交互平台（MAIPAE）主要通过对建筑工程各责任主体进行质量监督。主要包括工程报监督、工程监督、竣工备案构成。">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="author" content="兰必钟（Basfed Lan）, http://www.basfed.com">
+        <meta name="robots" content="index, follow">
+        <link rel="shortcut icon" href="images/maipae-logo.png">
+        <link rel="stylesheet" href="css/material.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="maipae-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+            <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600" role="banner">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">各责任主体 - 首页</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="user-name">兰必钟</div>
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                        <i class="material-icons">arrow_drop_down</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                        <li class="mdl-menu__item">
+                            <a href="">角色主页</a>
+                        </li>
+                        <li class="mdl-menu__item">
+                            <a href="">个人信息</a>
+                        </li>
+                        <li class="mdl-menu__item">
+                            <a href="">退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+                <header class="maipae-drawer-header">
+                    <h1 class="mdl-layout-title">MAIPAE</h1>
+                    <div class="maipae-contact-dropdown mdl-color-text--grey-500">
+                        <span>建筑工程多主体交互平台</span>
+                        <div class="mdl-layout-spacer"></div>
+                        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons" role="presentation">arrow_drop_down</i>
+                            <span class="visuallyhidden">Accounts</span>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                            <li class="mdl-menu__item">
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li class="mdl-menu__item">
+                                <a href="mailto:contact@maipae.com" target="_blank">邮件</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <nav class="maipae-navigation mdl-navigation mdl-color--blue-grey-800" role="navigation" aria-label="Global Navigation">
+                    <a class="mdl-navigation__link is-active" href="enterprise-index.html">用户管理</a>
+                </nav>
+                <footer class="footer mdl-color-text--blue-grey-100" role="contentinfo">
+                    <p>© 2016 MAIPAE</p>
+                </footer>
+            </div>
+            <main class="mdl-layout__content mdl-color--grey-100" role="main">
+                <!-- 主要内容 -->
+                <section class="section">
+                    <div class="mdl-grid page-main mdl-shadow--2dp">
+                        <header class="page-header">
+                            <h1>本单位人员</h1>
+                        </header>
+                        <div class="page-content mdl-cell mdl-cell--12-col">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                                <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">用户名</th>
+                                        <th>个人性别</th>
+                                        <th>出生日期</th>
+                                        <th>手机</th>
+                                        <th>邮箱</th>
+                                        <th>邮政编码</th>
+                                        <th>通讯地址</th>
+                                        <th>身份</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">兰必钟</td>
+                                        <td>男</td>
+                                        <td>2016/07/22</td>
+                                        <td>15396076888</td>
+                                        <td>bizhongbio@qq.com</td>
+                                        <td>250610</td>
+                                        <td>福建福州</td>
+                                        <td>建设项目负责人</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">兰必钟</td>
+                                        <td>男</td>
+                                        <td>2016/07/22</td>
+                                        <td>15396076888</td>
+                                        <td>bizhongbio@qq.com</td>
+                                        <td>250610</td>
+                                        <td>福建福州</td>
+                                        <td>建设项目负责人</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">兰必钟</td>
+                                        <td>男</td>
+                                        <td>2016/07/22</td>
+                                        <td>15396076888</td>
+                                        <td>bizhongbio@qq.com</td>
+                                        <td>250610</td>
+                                        <td>福建福州</td>
+                                        <td>建设项目负责人</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">兰必钟</td>
+                                        <td>男</td>
+                                        <td>2016/07/22</td>
+                                        <td>15396076888</td>
+                                        <td>bizhongbio@qq.com</td>
+                                        <td>250610</td>
+                                        <td>福建福州</td>
+                                        <td>建设项目负责人</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-grid page-main mdl-shadow--2dp">
+                        <header class="page-header">
+                            <h1>注册本单位人员</h1>
+                        </header>
+                        <div class="page-content mdl-cell mdl-cell--12-col">
+                            <form action="enterprise-index.html" method="POST" class="page-form form-cell--12-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="personName" id="personName">
+                                    <label class="mdl-textfield__label" for="personName">用户名</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <span class="maipae-radio-title">个人性别</span>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ps-option-1">
+                                        <input type="radio" id="ps-option-1" class="mdl-radio__button" name="personSex" value="男">
+                                        <span class="mdl-radio__label">男</span>
+                                    </label>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ps-option-2">
+                                        <input type="radio" id="ps-option-2" class="mdl-radio__button" name="personSex" value="女">
+                                        <span class="mdl-radio__label">女</span>
+                                    </label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="tel" name="telNumber" id="telNumber">
+                                    <label class="mdl-textfield__label" for="telNumber">手机</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="email" name="email" id="email">
+                                    <label class="mdl-textfield__label" for="email">邮箱</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <span class="maipae-radio-title">身份</span>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="i-option-1">
+                                        <input type="radio" id="i-option-1" class="mdl-radio__button" name="identity" value="建设项目负责人">
+                                        <span class="mdl-radio__label">建设项目负责人</span>
+                                    </label>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="i-option-2">
+                                        <input type="radio" id="i-option-2" class="mdl-radio__button" name="identity" value="施工项目负责人">
+                                        <span class="mdl-radio__label">施工项目负责人</span>
+                                    </label>
+                                </div>
+                                <p>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                        新增用户
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="js/material.min.js"></script>
+    </body>
+</html>

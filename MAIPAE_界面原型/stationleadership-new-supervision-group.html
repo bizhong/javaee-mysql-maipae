@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <title>分配监督组 - MAIPAE - 建筑工程多主体交互平台</title>
+        <meta name="keywords" content="MAIPAE,maipae,建筑工程多主体交互平台">
+        <meta name="description" content="建筑工程多主体交互平台（MAIPAE）主要通过对建筑工程各责任主体进行质量监督。主要包括工程报监督、工程监督、竣工备案构成。">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="author" content="Java EE 第8组：兰必钟，黄惠清，郭昊，杨雯升，怀智博，丹增乔热">
+        <meta name="robots" content="index, follow">
+        <link rel="shortcut icon" href="images/maipae-logo.png">
+        <link rel="stylesheet" href="css/material.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="maipae-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+            <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600" role="banner">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">站领导 - 分配监督组</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                        </div>
+                    </div>
+                    <div class="user-name">兰必钟</div>
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                        <i class="material-icons">arrow_drop_down</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                        <li class="mdl-menu__item">
+                            <a href="">主页</a>
+                        </li>
+                        <li class="mdl-menu__item">
+                            <a href="">注销</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+                <header class="maipae-drawer-header">
+                    <h1 class="mdl-layout-title">MAIPAE</h1>
+                    <div class="maipae-contact-dropdown mdl-color-text--grey-500">
+                        <span>建筑工程多主体交互平台</span>
+                        <div class="mdl-layout-spacer"></div>
+                        <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons" role="presentation">arrow_drop_down</i>
+                            <span class="visuallyhidden">Accounts</span>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                            <li class="mdl-menu__item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="mdl-menu__item">
+                                <a href="mailto:contact@maipae.com" target="_blank">Email</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <nav class="maipae-navigation mdl-navigation mdl-color--blue-grey-800" role="navigation" aria-label="Global Navigation">
+                    <a class="mdl-navigation__link is-active" href="stationleadership-index.html">分配监督组</a>
+                    <a class="mdl-navigation__link" href="">查看个人信息</a>
+                </nav>
+                <footer class="footer mdl-color-text--blue-grey-100" role="contentinfo">
+                    <p>© 2016 MAIPAE</p>
+                </footer>
+            </div>
+            <main class="mdl-layout__content mdl-color--grey-100" role="main">
+                <!-- 主要内容 -->
+                <section class="section">
+                    <div class="mdl-grid page-main mdl-shadow--2dp">
+                        <header class="page-header">
+                            <h1>建设项目工程信息（未分配监督组）</h1>
+                        </header>
+                        <div class="page-content mdl-cell mdl-cell--12-col">
+                            <form action="#" class="page-form form-cell--4-col">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="projectName" value="嘉禾广场" readonly="readonly" id="projectName">
+                                    <label class="mdl-textfield__label" for="projectName">项目名</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="projectStartTime" value="2015/01/01" readonly="readonly" id="projectStartTime">
+                                    <label class="mdl-textfield__label" for="projectStartTime">项目开始时间</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="projectEndTime" value="2015/09/01" readonly="readonly" id="projectEndTime">
+                                    <label class="mdl-textfield__label" for="projectEndTime">项目结束时间</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="belongStations" value="福建福州" readonly="readonly" id="belongStations">
+                                    <label class="mdl-textfield__label" for="belongStations">质监站属地</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="stationName" value="福建福州" readonly="readonly" id="stationName">
+                                    <label class="mdl-textfield__label" for="stationName">质监站名称</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="monitorState" value="已报监" readonly="readonly" id="monitorState">
+                                    <label class="mdl-textfield__label" for="monitorState">报监状态</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="state" value="已通过" readonly="readonly" id="state">
+                                    <label class="mdl-textfield__label" for="state">审核状态</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="projectFiles" value="无" readonly="readonly" id="projectFiles">
+                                    <label class="mdl-textfield__label" for="projectFiles">项目资料</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="remarks" value="无" readonly="readonly" id="remarks">
+                                    <label class="mdl-textfield__label" for="remarks">备注</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" value="兰必钟" readonly="readonly" id="enterprisePerson">
+                                    <label class="mdl-textfield__label" for="enterprisePerson">负责人</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mdl-grid page-main mdl-shadow--2dp">
+                        <header class="page-header">
+                            <h1>分配监督组</h1>
+                        </header>
+                        <div class="page-content mdl-cell mdl-cell--12-col">
+                            <form action="stationleadership-index.html" method="POST" class="page-form form-cell--6-col">
+                                <div>
+                                    监督组人员
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">兰必钟</span>
+                                    </label>
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">郭昊</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    监督职务
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">监督组组长</span>
+                                    </label>
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">监督组人员</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    监督组人员
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">兰必钟</span>
+                                    </label>
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">郭昊</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    监督职务
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">监督组组长</span>
+                                    </label>
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">监督组人员</span>
+                                    </label>
+                                </div>
+                                <p>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                        保存
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="js/material.min.js"></script>
+    </body>
+</html>
