@@ -1,0 +1,309 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     2016/7/24 16:42:38                           */
+/*==============================================================*/
+
+
+drop table if exists T_Rectification;
+
+drop table if exists T_SupervisePlan;
+
+drop table if exists T_SuperviseReport;
+
+drop table if exists T_CompletionData;
+
+drop table if exists T_CompletionSuperviseRecord;
+
+drop table if exists T_EnterpriseInfo;
+
+drop table if exists T_OrderSupervise;
+
+drop table if exists T_PersonInfo;
+
+drop table if exists T_ProjectInfo;
+
+drop table if exists T_ProjectPerson;
+
+drop table if exists T_ProjectSuperviseGroup;
+
+drop table if exists T_SuperviseRecord;
+
+drop table if exists T_SuperviseGroupPerson;
+
+/*==============================================================*/
+/* Table: T_Rectification                                    */
+/*==============================================================*/
+create table T_Rectification
+(
+   RectificationID      int not null auto_increment,
+   ProjectID            int,
+   ProjectSuperviseGroupID int,
+   RectificationTime    datetime,
+   RectificationInfo    varchar(100),
+   RectificationFinishReport varchar(100),
+   ResultInfo           varchar(100),
+   State                varchar(10),
+   primary key (RectificationID)
+);
+
+/*==============================================================*/
+/* Table: T_SupervisePlan                                    */
+/*==============================================================*/
+create table T_SupervisePlan
+(
+   SupervisePlanID      int not null auto_increment,
+   ProjectID            int,
+   EnterTime            datetime,
+   ProjectSuperviseGroupID int,
+   State                varchar(10),
+   Remarks              varchar(100),
+   SupervisePlanInfo    varchar(100),
+   primary key (SupervisePlanID)
+);
+
+/*==============================================================*/
+/* Table: T_SuperviseReport                                  */
+/*==============================================================*/
+create table T_SuperviseReport
+(
+   SuperviseReportID    int not null auto_increment,
+   ProjectID            int,
+   ProjectSuperviseGroupID int,
+   SuperviseReportTime  datetime,
+   SuperviseReportInfo  varchar(100),
+   State                varchar(10),
+   primary key (SuperviseReportID)
+);
+
+/*==============================================================*/
+/* Table: T_CompletionData                                      */
+/*==============================================================*/
+create table T_CompletionData
+(
+   CompletionDataID     int not null auto_increment,
+   ProjectID            int,
+   State                varchar(10),
+   Time                 datetime,
+   CompletionData       varchar(100),
+   primary key (CompletionDataID)
+);
+
+/*==============================================================*/
+/* Table: T_CompletionSuperviseRecord                           */
+/*==============================================================*/
+create table T_CompletionSuperviseRecord
+(
+   CompletionSuperviseRecordID int not null auto_increment,
+   ProjectID            int,
+   ProjectSuperviseGroupID int,
+   CompletionSuperviseRecordTime datetime,
+   State                varchar(10),
+   Remarks              varchar(100),
+   CompletionSuperviseRecordInfo varchar(100),
+   primary key (CompletionSuperviseRecordID)
+);
+
+/*==============================================================*/
+/* Table: T_EnterpriseInfo                                      */
+/*==============================================================*/
+create table T_EnterpriseInfo
+(
+   EnterpriseID         int not null auto_increment,
+   EnterpriseName       varchar(50),
+   EnterpriseStartTime  datetime,
+   EnterpriseCharacter  varchar(10),
+   EnterpriseAddress    varchar(50),
+   EnterpriseNumber     int,
+   EnterpriseWebSite    varchar(100),
+   EnterpriseOrganCode  varchar(50),
+   EnterprisePerson     varchar(50),
+   EnterpriseEmail      varchar(50),
+   EnterprisePersonTel  varchar(20),
+   EnterprisePassword   varchar(15),
+   EnterpriseState      varchar(10),
+   Remarks              varchar(100),
+   primary key (EnterpriseID)
+);
+
+/*==============================================================*/
+/* Table: T_OrderSupervise                                      */
+/*==============================================================*/
+create table T_OrderSupervise
+(
+   OrderSuperviseID     int not null auto_increment,
+   ProjectID            int,
+   EnterTime            datetime,
+   ProjectSuperviseGroupID int,
+   State                varchar(10),
+   Remarks              varchar(100),
+   OrderSuperviseInfo   varchar(100),
+   SuperviseTime        datetime,
+   IfSupervisereleased  blob,
+   primary key (OrderSuperviseID)
+);
+
+/*==============================================================*/
+/* Table: T_PersonInfo                                          */
+/*==============================================================*/
+create table T_PersonInfo
+(
+   PersonID             int not null auto_increment,
+   PersonName           varchar(50),
+   PersonSex            varchar(8),
+   BirthDate            datetime,
+   TelNumber            varchar(20),
+   Email                varchar(50),
+   Password             varchar(15),
+   PersonIdentity       varchar(20),
+   ZipCode              int,
+   Address              varchar(80),
+   EnterpriseID         int,
+   primary key (PersonID)
+);
+
+/*==============================================================*/
+/* Table: T_ProjectInfo                                         */
+/*==============================================================*/
+create table T_ProjectInfo
+(
+   ProjectID            int not null auto_increment,
+   ProjectName          varchar(50),
+   ProjectFiles         varchar(100),
+   EnterpriseID         int,
+   State                varchar(10),
+   ProjectStartTime     datetime,
+   ProjectEndTime       datetime,
+   PersonID             int,
+   BelongStations       varchar(30),
+   StationName          varchar(30),
+   Remarks              varchar(100),
+   MonitorState         varchar(10),
+   primary key (ProjectID)
+);
+
+/*==============================================================*/
+/* Table: T_ProjectPerson                                       */
+/*==============================================================*/
+create table T_ProjectPerson
+(
+   ID                   int not null auto_increment,
+   ProjectID            int,
+   PersonID             int,
+   primary key (ID)
+);
+
+/*==============================================================*/
+/* Table: T_ProjectSuperviseGroup                               */
+/*==============================================================*/
+create table T_ProjectSuperviseGroup
+(
+   ProjectSuperviseGroupID int not null auto_increment,
+   ProjectID            int,
+   primary key (ProjectSuperviseGroupID)
+);
+
+/*==============================================================*/
+/* Table: T_SuperviseGroupPerson                               */
+/*==============================================================*/
+create table T_SuperviseGroupPerson
+(
+   ID                   int not null auto_increment,
+   ProjectSuperviseGroupID      int,
+   PersonID             int,
+   Post                 varchar(20),
+   primary key (ID)
+);
+
+/*==============================================================*/
+/* Table: T_SuperviseRecord                                     */
+/*==============================================================*/
+create table T_SuperviseRecord
+(
+   SuperviseRecordID    int not null auto_increment,
+   ProjectID            int,
+   ProjectSuperviseGroupID int,
+   SuperviseRecordTime  datetime,
+   State                varchar(10),
+   Remarks              varchar(100),
+   SuperviseRecordInfo  varchar(100),
+   primary key (SuperviseRecordID)
+);
+
+alter table T_Rectification add constraint RectificationID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_Rectification add constraint RectificationID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter table T_SupervisePlan add constraint SupervisePlanID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_SupervisePlan add constraint SupervisePlanID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter table T_SuperviseReport add constraint FK_SuperviseReportID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_SuperviseReport add constraint SuperviseReportID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter table T_CompletionData add constraint CompletionDataID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_CompletionSuperviseRecord add constraint CompletionSuperviseRecordID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_CompletionSuperviseRecord add constraint CompletionSuperviseRecordID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter table T_OrderSupervise add constraint OrderSuperviseID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_OrderSupervise add constraint OrderSuperviseID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter table T_PersonInfo add constraint PersonID_DeprrtmentID foreign key (EnterpriseID)
+      references T_EnterpriseInfo (EnterpriseID) on delete restrict on update restrict;
+
+alter table T_ProjectInfo add constraint ProjectID_DepartmentID foreign key (EnterpriseID)
+      references T_EnterpriseInfo (EnterpriseID) on delete restrict on update restrict;
+
+alter table T_ProjectInfo add constraint ProjectID_PersonID foreign key (PersonID)
+      references T_PersonInfo (PersonID) on delete restrict on update restrict;
+
+alter table T_ProjectPerson add constraint ID_PersonID foreign key (PersonID)
+      references T_PersonInfo (PersonID) on delete restrict on update restrict;
+
+alter table T_ProjectPerson add constraint ID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_SuperviseGroupPerson add constraint ID_PersonID foreign key (PersonID)
+      references T_PersonInfo (PersonID) on delete restrict on update restrict;
+
+
+alter table T_SuperviseGroupPerson add constraint ID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter table T_ProjectSuperviseGroup add constraint ProjectSuperviseGroupID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_SuperviseRecord add constraint SuperviseRecordID_ProjectID foreign key (ProjectID)
+      references T_ProjectInfo (ProjectID) on delete restrict on update restrict;
+
+alter table T_SuperviseRecord add constraint SuperviseRecordID_ProjectSuperviseGroupID foreign key (ProjectSuperviseGroupID)
+      references T_ProjectSuperviseGroup (ProjectSuperviseGroupID) on delete restrict on update restrict;
+
+alter   table   T_Rectification   auto_increment   =   100000; 
+alter   table   T_SupervisePlan   auto_increment   =   150000; 
+alter   table   T_SuperviseReport   auto_increment   =   200000; 
+alter   table   T_CompletionData   auto_increment   =   250000; 
+alter   table   T_CompletionSuperviseRecord   auto_increment   =   300000; 
+alter   table   T_EnterpriseInfo   auto_increment   =   350000; 
+alter   table   T_OrderSupervise   auto_increment   =   400000; 
+alter   table   T_PersonInfo   auto_increment   =   450000; 
+alter   table   T_ProjectInfo   auto_increment   =   500000; 
+alter   table   T_ProjectPerson   auto_increment   =   550000; 
+alter   table   T_ProjectSuperviseGroup   auto_increment   =   600000; 
+alter   table   T_SuperviseRecord   auto_increment   =   650000; 
+alter   table   T_SuperviseGroupPerson   auto_increment   =   700000; 
+
