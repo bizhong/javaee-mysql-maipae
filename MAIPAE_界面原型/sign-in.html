@@ -7,7 +7,7 @@
         <meta name="keywords" content="MAIPAE,maipae,建筑工程多主体交互平台">
         <meta name="description" content="建筑工程多主体交互平台（MAIPAE）主要通过对建筑工程各责任主体进行质量监督。主要包括工程报监督、工程监督、竣工备案构成。">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-        <meta name="author" content="Java EE 第8组：兰必钟，黄惠清，郭昊，杨雯升，怀智博，丹增乔热">
+        <meta name="author" content="兰必钟（Basfed Lan）, http://www.basfed.com">
         <meta name="robots" content="index, follow">
         <link rel="shortcut icon" href="images/maipae-logo.png">
         <link rel="stylesheet" href="css/material.min.css">
@@ -19,24 +19,19 @@
                 <div class="mdl-layout__header-row">
                     <span class="mdl-layout-title">用户登录</span>
                     <div class="mdl-layout-spacer"></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-                            <i class="material-icons">search</i>
-                        </label>
-                        <div class="mdl-textfield__expandable-holder">
-                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
-                        </div>
-                    </div>
                     <div class="user-name">兰必钟</div>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
                         <i class="material-icons">arrow_drop_down</i>
                     </button>
                     <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
                         <li class="mdl-menu__item">
-                            <a href="">主页</a>
+                            <a href="">角色主页</a>
                         </li>
                         <li class="mdl-menu__item">
-                            <a href="">注销</a>
+                            <a href="">个人信息</a>
+                        </li>
+                        <li class="mdl-menu__item">
+                            <a href="">退出登录</a>
                         </li>
                     </ul>
                 </div>
@@ -53,17 +48,16 @@
                         </button>
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
                             <li class="mdl-menu__item">
-                                <a href="index.html">Home</a>
+                                <a href="index.html">首页</a>
                             </li>
                             <li class="mdl-menu__item">
-                                <a href="mailto:contact@maipae.com" target="_blank">Email</a>
+                                <a href="mailto:contact@maipae.com" target="_blank">邮件</a>
                             </li>
                         </ul>
                     </div>
                 </header>
                 <nav class="maipae-navigation mdl-navigation mdl-color--blue-grey-800" role="navigation" aria-label="Global Navigation">
                     <a class="mdl-navigation__link" href="enterprise-sign-up.html">注册单位</a>
-                    <a class="mdl-navigation__link is-active" href="sign-in.html">用户登录</a>
                 </nav>
                 <footer class="footer mdl-color-text--blue-grey-100" role="contentinfo">
                     <p>© 2016 MAIPAE</p>
@@ -79,9 +73,8 @@
                         <div class="page-content mdl-cell mdl-cell--12-col">
                             <form action="#" method="POST" class="page-form form-cell--12-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" pattern="[0-9]*" type="text" name="personID" id="personID">
-                                    <label class="mdl-textfield__label" for="personID">人员ID</label>
-                                    <span class="mdl-textfield__error">Numbers only</span>
+                                    <input class="mdl-textfield__input" pattern="[0-9]*" type="text" name="personName" autofocus id="personName">
+                                    <label class="mdl-textfield__label" for="personName">用户名</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="password" name="password" id="password">

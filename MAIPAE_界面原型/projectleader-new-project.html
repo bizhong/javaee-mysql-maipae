@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <title>修改建设项目工程 - MAIPAE - 建筑工程多主体交互平台</title>
+        <title>新增建设项目工程 - MAIPAE - 建筑工程多主体交互平台</title>
         <meta name="keywords" content="MAIPAE,maipae,建筑工程多主体交互平台">
         <meta name="description" content="建筑工程多主体交互平台（MAIPAE）主要通过对建筑工程各责任主体进行质量监督。主要包括工程报监督、工程监督、竣工备案构成。">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
@@ -17,7 +17,7 @@
         <div class="maipae-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
             <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600" role="banner">
                 <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">建设项目负责人 - 修改建设项目工程</span>
+                    <span class="mdl-layout-title">建设项目负责人 - 新增建设项目工程</span>
                     <div class="mdl-layout-spacer"></div>
                     <div class="user-name">兰必钟</div>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
@@ -57,7 +57,7 @@
                     </div>
                 </header>
                 <nav class="maipae-navigation mdl-navigation mdl-color--blue-grey-800" role="navigation" aria-label="Global Navigation">
-                    <a class="mdl-navigation__link is-active" href="projectleader-index.html">注册建设项目工程</a>
+                    <a class="mdl-navigation__link is-active" href="projectleader-index.jsp">注册建设项目工程</a>
                 </nav>
                 <footer class="footer mdl-color-text--blue-grey-100" role="contentinfo">
                     <p>© 2016 MAIPAE</p>
@@ -68,12 +68,12 @@
                 <section class="section">
                     <div class="mdl-grid page-main mdl-shadow--2dp">
                         <header class="page-header">
-                            <h1>修改建设项目工程</h1>
+                            <h1>新增建设项目工程</h1>
                         </header>
                         <div class="page-content mdl-cell mdl-cell--12-col">
-                            <form action="projectleader-index.html" class="page-form form-cell--12-col">
+                            <form action="projectleader-index.html" method="POST" class="page-form form-cell--12-col">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" name="projectName" value="四川艺术中心会馆" id="projectName">
+                                    <input class="mdl-textfield__input" type="text" name="projectName" id="projectName">
                                     <label class="mdl-textfield__label" for="projectName">项目名</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -83,7 +83,7 @@
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <span class="maipae-radio-title">质监站名称</span>
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sn-option-1">
-                                        <input type="radio" id="sn-option-1" class="mdl-radio__button" name="stationName" value="锦江区质监站" checked>
+                                        <input type="radio" id="sn-option-1" class="mdl-radio__button" name="stationName" value="锦江区质监站">
                                         <span class="mdl-radio__label">锦江区质监站</span>
                                     </label>
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sn-option-2">
@@ -124,35 +124,24 @@
                                     </label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" name="projectStartTime" value="2016/01/01" id="projectStartTime">
+                                    <input class="mdl-textfield__input" type="date" name="projectStartTime" id="projectStartTime">
                                     <label class="mdl-textfield__label" for="projectStartTime">项目开始时间</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" name="projectEndTime" value="2016/05/05" id="projectEndTime">
+                                    <input class="mdl-textfield__input" type="date" name="projectEndTime" id="projectEndTime">
                                     <label class="mdl-textfield__label" for="projectEndTime">项目结束时间</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <span class="maipae-radio-title">报监状态</span>
-                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sn-option-1">
-                                        <input type="radio" id="sn-option-1" class="mdl-radio__button" name="monitorState" value="未报监" checked>
-                                        <span class="mdl-radio__label">未报监</span>
-                                    </label>
-                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sn-option-2">
-                                        <input type="radio" id="sn-option-2" class="mdl-radio__button" name="monitorState" value="已报监">
-                                        <span class="mdl-radio__label">已报监</span>
-                                    </label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" name="projectFiles" value="无" id="projectFiles">
+                                    <input class="mdl-textfield__input" type="text" name="projectFiles" id="projectFiles">
                                     <label class="mdl-textfield__label" for="projectFiles">项目资料</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" name="remarks" value="无" id="remarks">
+                                    <textarea class="mdl-textfield__input" type="text" name="remarks" rows="5" id="remarks"></textarea>
                                     <label class="mdl-textfield__label" for="remarks">备注</label>
                                 </div>
                                 <p>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-                                        修改
+                                        提交
                                     </button>
                                 </p>
                             </form>

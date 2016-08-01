@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <title>建设项目工程各方主体人员 - MAIPAE - 建筑工程多主体交互平台</title>
+        <title>站领导 - MAIPAE - 建筑工程多主体交互平台</title>
         <meta name="keywords" content="MAIPAE,maipae,建筑工程多主体交互平台">
         <meta name="description" content="建筑工程多主体交互平台（MAIPAE）主要通过对建筑工程各责任主体进行质量监督。主要包括工程报监督、工程监督、竣工备案构成。">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-        <meta name="author" content="Java EE 第8组：兰必钟，黄惠清，郭昊，杨雯升，怀智博，丹增乔热">
+        <meta name="author" content="兰必钟（Basfed Lan）, http://www.basfed.com">
         <meta name="robots" content="index, follow">
         <link rel="shortcut icon" href="images/maipae-logo.png">
         <link rel="stylesheet" href="css/material.min.css">
@@ -17,26 +17,21 @@
         <div class="maipae-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
             <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600" role="banner">
                 <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">建设项目负责人 - 建设项目工程各方主体人员</span>
+                    <span class="mdl-layout-title">站领导 - 首页</span>
                     <div class="mdl-layout-spacer"></div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-                            <i class="material-icons">search</i>
-                        </label>
-                        <div class="mdl-textfield__expandable-holder">
-                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
-                        </div>
-                    </div>
                     <div class="user-name">兰必钟</div>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
                         <i class="material-icons">arrow_drop_down</i>
                     </button>
                     <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
                         <li class="mdl-menu__item">
-                            <a href="">主页</a>
+                            <a href="">角色主页</a>
                         </li>
                         <li class="mdl-menu__item">
-                            <a href="">注销</a>
+                            <a href="">个人信息</a>
+                        </li>
+                        <li class="mdl-menu__item">
+                            <a href="">退出登录</a>
                         </li>
                     </ul>
                 </div>
@@ -53,19 +48,16 @@
                         </button>
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
                             <li class="mdl-menu__item">
-                                <a href="index.html">Home</a>
+                                <a href="index.html">首页</a>
                             </li>
                             <li class="mdl-menu__item">
-                                <a href="mailto:contact@maipae.com" target="_blank">Email</a>
+                                <a href="mailto:contact@maipae.com" target="_blank">邮件</a>
                             </li>
                         </ul>
                     </div>
                 </header>
                 <nav class="maipae-navigation mdl-navigation mdl-color--blue-grey-800" role="navigation" aria-label="Global Navigation">
-                    <a class="mdl-navigation__link" href="projectleader-index.html">注册建设项目工程</a>
-                    <a class="mdl-navigation__link" href="projectleader-project-list.html">查看建设项目工程</a>
-                    <a class="mdl-navigation__link is-active" href="projectleader-project-members-list.html">查看建设项目工程人员</a>
-                    <a class="mdl-navigation__link" href="">查看个人信息</a>
+                    <a class="mdl-navigation__link is-active" href="stationleader-index.html">分配监督组</a>
                 </nav>
                 <footer class="footer mdl-color-text--blue-grey-100" role="contentinfo">
                     <p>© 2016 MAIPAE</p>
@@ -76,59 +68,47 @@
                 <section class="section">
                     <div class="mdl-grid page-main mdl-shadow--2dp">
                         <header class="page-header">
-                            <h1>建设项目工程各方主体人员</h1>
+                            <h1>分配监督组</h1>
                         </header>
                         <div class="page-content mdl-cell mdl-cell--12-col">
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                                 <thead>
                                     <tr>
                                         <th class="mdl-data-table__cell--non-numeric">项目名</th>
+                                        <th>项目开始时间</th>
+                                        <th>项目结束时间</th>
+                                        <th>质监站属地</th>
+                                        <th>质监站名称</th>
+                                        <th>报监状态</th>
+                                        <th>审核状态</th>
                                         <th>负责人</th>
-                                        <th>组员一</th>
-                                        <th>组员二</th>
-                                        <th>组员三</th>
-                                        <th>组员四</th>
-                                        <th>组员五</th>
-                                        <th>组员六</th>
-                                        <th>组员七</th>
-                                        <th>组员八</th>
+                                        <th>分配监督组</th>
+                                        <th>修改监督组</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="mdl-data-table__cell--non-numeric">泰和广场</td>
-                                        <td>兰必钟</td>
-                                        <td>郭昊</td>
-                                        <td>怀智博</td>
-                                        <td>黄惠清</td>
-                                        <td>杨雯升</td>
-                                        <td>丹增乔热</td>
+                                        <td class="mdl-data-table__cell--non-numeric">四川艺术中心会馆</td>
+                                        <td>2016/01/01</td>
+                                        <td>2016/05/05</td>
+                                        <td>四川省成都市</td>
+                                        <td>锦江区质监站</td>
+                                        <td>已报监</td>
+                                        <td>通过</td>
+                                        <td>张三</td>
                                         <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><a href="stationleader-modify-projectsupervisiongroup.html">修改</a></td>
                                     </tr>
                                     <tr>
-                                        <td class="mdl-data-table__cell--non-numeric">万达广场</td>
-                                        <td>兰必钟</td>
-                                        <td>郭昊</td>
-                                        <td>怀智博</td>
-                                        <td>黄惠清</td>
-                                        <td>杨雯升</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="mdl-data-table__cell--non-numeric">嘉禾广场</td>
-                                        <td>兰必钟</td>
-                                        <td>郭昊</td>
-                                        <td>怀智博</td>
-                                        <td>黄惠清</td>
-                                        <td>杨雯升</td>
-                                        <td>丹增乔热</td>
-                                        <td></td>
-                                        <td></td>
+                                        <td class="mdl-data-table__cell--non-numeric">四川美大住宅区</td>
+                                        <td>2016/02/01</td>
+                                        <td>2016/07/05</td>
+                                        <td>四川省成都市</td>
+                                        <td>锦江区质监站</td>
+                                        <td>已报监</td>
+                                        <td>通过</td>
+                                        <td>张飞</td>
+                                        <td><a href="stationleader-add-projectsupervisiongroup.html">分配</a></td>
                                         <td></td>
                                     </tr>
                                 </tbody>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <title>审核建设项目工程 - MAIPAE - 建筑工程多主体交互平台</title>
+        <title>用户管理 - MAIPAE - 建筑工程多主体交互平台</title>
         <meta name="keywords" content="MAIPAE,maipae,建筑工程多主体交互平台">
         <meta name="description" content="建筑工程多主体交互平台（MAIPAE）主要通过对建筑工程各责任主体进行质量监督。主要包括工程报监督、工程监督、竣工备案构成。">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
@@ -17,7 +17,7 @@
         <div class="maipae-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
             <header class="mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600" role="banner">
                 <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">报监审核员 - 审核建设项目工程</span>
+                    <span class="mdl-layout-title">系统管理员 - 用户管理</span>
                     <div class="mdl-layout-spacer"></div>
                     <div class="user-name">兰必钟</div>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
@@ -57,7 +57,8 @@
                     </div>
                 </header>
                 <nav class="maipae-navigation mdl-navigation mdl-color--blue-grey-800" role="navigation" aria-label="Global Navigation">
-                    <a class="mdl-navigation__link is-active" href="auditor-index.html">报监审查</a>
+                    <a class="mdl-navigation__link" href="admin-index.html">审核单位资料</a>
+                    <a class="mdl-navigation__link is-active" href="admin-person-manage.html">用户管理</a>
                 </nav>
                 <footer class="footer mdl-color-text--blue-grey-100" role="contentinfo">
                     <p>© 2016 MAIPAE</p>
@@ -68,64 +69,76 @@
                 <section class="section">
                     <div class="mdl-grid page-main mdl-shadow--2dp">
                         <header class="page-header">
-                            <h1>建设项目工程信息（审核的）</h1>
+                            <h1>本系统人员</h1>
                         </header>
                         <div class="page-content mdl-cell mdl-cell--12-col">
-                            <form class="page-form form-cell--4-col">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="四川艺术中心会馆" readonly="readonly" id="projectName">
-                                    <label class="mdl-textfield__label" for="projectName">项目名</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="2016/01/01" readonly="readonly" id="projectStartTime">
-                                    <label class="mdl-textfield__label" for="projectStartTime">项目开始时间</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="2016/05/05" readonly="readonly" id="projectEndTime">
-                                    <label class="mdl-textfield__label" for="projectEndTime">项目结束时间</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="四川省成都市" readonly="readonly" id="belongStations">
-                                    <label class="mdl-textfield__label" for="belongStations">质监站属地</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="锦江区质监站" readonly="readonly" id="stationName">
-                                    <label class="mdl-textfield__label" for="stationName">质监站名称</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="已报监" readonly="readonly" id="monitorState">
-                                    <label class="mdl-textfield__label" for="monitorState">报监状态</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="无" readonly="readonly" id="projectFiles">
-                                    <label class="mdl-textfield__label" for="projectFiles">项目资料</label>
-                                </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" value="无" readonly="readonly" id="remarks">
-                                    <label class="mdl-textfield__label" for="remarks">备注</label>
-                                </div>
-                            </form>
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                                <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">用户名</th>
+                                        <th>手机</th>
+                                        <th>邮箱</th>
+                                        <th>身份</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <c:forEach items="${enterprisePersonList}" var="epl">
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">兰必钟</td>
+                                        <td>40088208820</td>
+                                        <td>bizhongbio@outlook.com</td>
+                                        <td>系统管理员</td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <div class="mdl-grid page-main mdl-shadow--2dp">
                         <header class="page-header">
-                            <h1>报监审查，修改审核状态</h1>
+                            <h1>注册本单位人员</h1>
                         </header>
                         <div class="page-content mdl-cell mdl-cell--12-col">
-                            <form action="auditor-index.html" method="POST" class="page-form form-cell--6-col">
+                            <form action="admin-person-manage.html" method="POST" class="page-form form-cell--12-col">
+                                <input type="hidden" name="enterpriseID" value="<%=enterpriseid%>">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <span class="maipae-radio-title">审核结果</span>
-                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                                        <input type="radio" id="option-1" class="mdl-radio__button" name="state" value="通过">
-                                        <span class="mdl-radio__label">通过</span>
+                                    <input class="mdl-textfield__input" type="text" name="personName" id="personName">
+                                    <label class="mdl-textfield__label" for="personName">用户名</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="tel" name="telNumber" id="telNumber">
+                                    <label class="mdl-textfield__label" for="telNumber">手机</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="email" name="email" id="email">
+                                    <label class="mdl-textfield__label" for="email">邮箱</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <span class="maipae-radio-title">身份</span>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pi-option-1">
+                                        <input type="radio" id="pi-option-1" class="mdl-radio__button" name="personIdentity" value="系统管理员">
+                                        <span class="mdl-radio__label">系统管理员</span>
                                     </label>
-                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                                        <input type="radio" id="option-2" class="mdl-radio__button" name="state" value="不通过">
-                                        <span class="mdl-radio__label">不通过</span>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pi-option-2">
+                                        <input type="radio" id="pi-option-2" class="mdl-radio__button" name="personIdentity" value="报监审核员">
+                                        <span class="mdl-radio__label">报监审核员</span>
+                                    </label>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pi-option-3">
+                                        <input type="radio" id="pi-option-3" class="mdl-radio__button" name="personIdentity" value="站领导">
+                                        <span class="mdl-radio__label">站领导</span>
+                                    </label>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pi-option-4">
+                                        <input type="radio" id="pi-option-4" class="mdl-radio__button" name="personIdentity" value="监督组长">
+                                        <span class="mdl-radio__label">监督组长</span>
+                                    </label>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="pi-option-5">
+                                        <input type="radio" id="pi-option-5" class="mdl-radio__button" name="personIdentity" value="监督员">
+                                        <span class="mdl-radio__label">监督员</span>
+                                    </label>
                                 </div>
                                 <p>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-                                        保存
+                                        新增用户
                                     </button>
                                 </p>
                             </form>
