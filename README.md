@@ -8,6 +8,7 @@
 - [项目描述](#项目描述)
 - [项目模块](#项目模块)
 - [我的任务](#我的任务)
+- [页面展示](#页面展示)
 
 ## 项目描述
 
@@ -84,5 +85,84 @@
 - 开《周例会》
 - 填写《项目工作日志》
 
+## 页面展示
+
+- 首页
+
+![首页][3]
+
+- 注册单位（各责任主体）
+
+![注册单位][4]
+
+- 用户登录（各责任主体、系统管理员、建设项目负责人、报监审核员、站领导、监督员、监督组长、施工项目负责人）
+
+![用户登录][5]
+
+- 系统管理员首页/待审核的单位注册列表（系统管理员）
+
+![系统管理员首页/待审核的单位注册列表][6]
+
+- 审核单位资料（系统管理员）
+
+![审核单位资料][7]
+
+- 用户管理（系统管理员）
+
+![用户管理][8]
+
+- 各责任主体首页/注册本单位人员（各责任主体）
+
+![各责任主体首页/注册本单位人员][9]
+
+- 注册建设项目（建设项目负责人）
+
+建设项目负责人首页/查询建设项目工程（建设项目负责人）
+
+![建设项目负责人首页/查询建设项目工程][10]
+
+查询建设项目工程结果（建设项目负责人）
+
+![查询建设项目工程结果][11]
+
+修改建设项目工程（建设项目负责人）
+
+![修改建设项目工程][12]
+
+新增建设项目工程（建设项目负责人）
+
+![新增建设项目工程][13]
+
+- 报监审核员首页/建设项目工程列表（报监审核员）
+
+![报监审核员首页/建设项目工程列表][14]
+
+- 审核建设项目工程（报监审核员）
+
+![审核建设项目工程][15]
+
+- 站领导首页/分配（或修改）监督组列表（站领导）
+
+![站领导首页/分配（或修改）监督组列表][16]
+
+- 分配监督组（站领导）
+
+![分配监督组][17]
+
   [1]: https://github.com/basfed/javaee-mysql-maipae/tree/master/MAIPAE_%E7%95%8C%E9%9D%A2%E5%8E%9F%E5%9E%8B
   [2]: https://github.com/basfed/javaee-mysql-maipae/tree/master/MAIPAE_%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81
+  [3]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/index.png
+  [4]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/enterprise-sign-up.png
+  [5]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/sign-in.png
+  [6]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/admin-index.png
+  [7]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/admin-review-enterprise.png
+  [8]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/admin-person-manage.png
+  [9]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/enterprise-index.png
+  [10]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-index.png
+  [11]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-search-results.png
+  [12]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-modify-project.png
+  [13]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-new-project.png
+  [14]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/auditor-index.png
+  [15]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/auditor-audit-project.png
+  [16]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/stationleader-index.png
+  [17]: https://github.com/basfed/javaee-mysql-maipae/blob/master/MAIPAE_images/stationleader-add-projectsupervisiongroup.png
