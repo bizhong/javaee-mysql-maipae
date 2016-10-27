@@ -1,7 +1,7 @@
 # 建筑工程多主体交互平台（MAIPAE）
 
 在校实习期间，使用 JSP、MySQL 数据库、MVC 框架和 MDL（Material Design Lite
-）组件开发实现的建筑工程多主体交互平台（MAIPAE）。
+）组件库开发实现的建筑工程多主体交互平台（MAIPAE）。
 
 ## 目录
 
@@ -61,7 +61,7 @@
 
 ## 我的任务
 
-在校实习期间（2016/7/15 - 2016/7/30），我（组长）的主要任务大体如下：
+在校实习期间（2016.7.15 - 2016.7.30），我（组长）的主要任务大体如下：
 
 ### 1 策划阶段
 
@@ -151,18 +151,18 @@
 
   [1]: https://github.com/bizhong/javaee-mysql-maipae/tree/master/MAIPAE_%E7%95%8C%E9%9D%A2%E5%8E%9F%E5%9E%8B
   [2]: https://github.com/bizhong/javaee-mysql-maipae/tree/master/MAIPAE_%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81
-  [3]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/index.png
-  [4]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/enterprise-sign-up.png
-  [5]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/sign-in.png
-  [6]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/admin-index.png
-  [7]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/admin-review-enterprise.png
-  [8]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/admin-person-manage.png
-  [9]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/enterprise-index.png
-  [10]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-index.png
-  [11]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-search-results.png
-  [12]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-modify-project.png
-  [13]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/projectleader-new-project.png
-  [14]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/auditor-index.png
-  [15]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/auditor-audit-project.png
-  [16]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/stationleader-index.png
-  [17]: https://github.com/bizhong/javaee-mysql-maipae/blob/master/MAIPAE_images/stationleader-add-projectsupervisiongroup.png
+  [3]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/index.png
+  [4]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/enterprise-sign-up.png
+  [5]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/sign-in.png
+  [6]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/admin-index.png
+  [7]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/admin-review-enterprise.png
+  [8]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/admin-person-manage.png
+  [9]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/enterprise-index.png
+  [10]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/projectleader-index.png
+  [11]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/projectleader-search-results.png
+  [12]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/projectleader-modify-project.png
+  [13]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/projectleader-new-project.png
+  [14]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/auditor-index.png
+  [15]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/auditor-audit-project.png
+  [16]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/stationleader-index.png
+  [17]: https://github.com/bizhong/images/tree/master/javaee-mysql-maipae/stationleader-add-projectsupervisiongroup.png
